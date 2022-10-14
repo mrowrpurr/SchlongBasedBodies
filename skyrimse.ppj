@@ -16,6 +16,7 @@
     </Variables>
     <Imports>
         <Import>@Imports\SOS</Import>
+        <Import>@Imports\JContainers</Import>
         <Import>@Imports\SkyUI</Import>
         <Import>@Imports\SKSE</Import>
         <Import>C:\Program Files (x86)\Steam\steamapps\common\Skyrim Special Edition\Data\Scripts\Source</Import>
