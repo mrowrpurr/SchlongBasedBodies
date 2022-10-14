@@ -1,3 +1,3 @@
-# Schlong-based Bodies
+# [NSFW] Schlong-based Bodies
 
 ![Schlong-based Bodies](Images/SchlongBasedBodies_Logo.png)
