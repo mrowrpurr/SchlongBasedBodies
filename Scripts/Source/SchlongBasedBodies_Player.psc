@@ -3,10 +3,11 @@ scriptName SchlongBasedBodies_Player extends ReferenceAlias
 SchlongBasedBodies_Main property SchlongBasedBodies_Main_Quest auto
 
 event OnInit()
-    SchlongBasedBodies.Log("PLAYER ON INIT - adding cloak")
-    GetActorReference().AddSpell(SchlongBasedBodies_Main_Quest.SchlongBasedBodies_Cloak_Ability)
+    SchlongBasedBodies.Log("Player init")
+    SchlongBasedBodies_Main_Quest.Initialize()
 endEvent
 
 event OnPlayerLoadGame()
-    SchlongBasedBodies.Log("PLAYER LOAD GAME")
+    SchlongBasedBodies.Log("Loaded Game")
+    SchlongBasedBodies_Main_Quest.Initialize()
 endEvent

@@ -1,0 +1,8 @@
+{
+    "Name": "Female Beast Races with Schlongs use Beast Alt BOSSE body",
+    "Body": "Beast Alt",
+    "Sex": "Female",
+    "Races": ["Khajiit", "Argonian"],
+    "Schlongs": [],
+    "AnySchlong": true
+}

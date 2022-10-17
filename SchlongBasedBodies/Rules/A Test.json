@@ -1,0 +1,14 @@
+{
+    "Name": "A Test",
+    "Body": "Beast Alt",
+    "Player": true,
+    "Pronouns": "they/them",
+    "Sex": "Female",
+    "SexLab Gender": "Male",
+    "Keywords": [],
+    "Spells": [],
+    "Factions": [],
+    "Races": ["Khajiit", "Argonian"],
+    "Schlongs": ["Foo Schlong", "Bar Schlong"],
+    "AnySchlong": true
+}

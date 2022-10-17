@@ -3,43 +3,58 @@ scriptName SchlongBasedBodies_JDB
     JDB storage for Schlong-based Bodies
 }
 
+;;;;;;;;;;
+
+function InitializeDatabase() global
+   InitializeRulesDatabase() 
+endFunction
+
+function InitializeRulesDatabase() global
+    if ! EnabledRules()
+        SetObject(EnabledRules(), JMap.object())
+    endIf
+endFunction
+
+;;;;;;;;;;
+
+function SetObject(string path, int obj) global
+    JDB.solveObjSetter(path, obj, createMissingKeys = true)
+endFunction
+
+;;;;;;;;;;
+
 string function RootPath() global
     return ".schlongBasedBodies"
 endFunction
 
-string function BuildPath(string pathPart) global
+string function Path(string pathPart) global
     return RootPath() + "." + pathPart
 endFunction
 
-string function DeletePath(string path) global
-    JDB.solveObjSetter(path, 0, createMissingKeys = true)
+;;;;;;;;;;
+
+string function RulesPath(string pathPart) global
+    return Path("rules." + pathPart)
 endFunction
 
-string function PresetsByFilename_Path() global
-    return BuildPath("presetsFromFilesystem")
+string function EnabledRulesPath() global
+    return RulesPath("enabled")
 endFunction
 
-int function PresetsByFilename_Get() global
-    return JDB.solveObj(PresetsByFilename_Path())
+string function RulesCachePath() global
+    return RulesPath("cache")
 endFunction
 
-function PresetsByFilename_Set(int obj) global
-    JDB.solveObjSetter(PresetsByFilename_Path(), obj, createMissingKeys = true)
+int function EnabledRules() global
+    return JDB.solveObj(EnabledRulesPath())
 endFunction
 
-function PresetsByFilename_Delete() global
-    DeletePath(PresetsByFilename_Path())
+int function RulesCache() global
+    return JDB.solveObj(RulesCachePath())
 endFunction
 
-string function CurrentPreset_Path() global
-    return BuildPath("currentlySelectedPreset")
+function UpdateRulesCache(int obj) global
+    SetObject(RulesCachePath(), obj)
 endFunction
 
-int function CurrentPreset_Get() global
-    return JDB.solveObj(CurrentPreset_Path())    
-endFunction
-
-function CurrentPreset_Set(int obj) global
-    JDB.solveObjSetter(CurrentPreset_Path(), obj, createMissingKeys = true)
-endFunction
-
+;;;;;;;;;;

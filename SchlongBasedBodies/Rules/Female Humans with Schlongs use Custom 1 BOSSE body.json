@@ -1,0 +1,8 @@
+{
+    "Name": "Female Humans with Schlongs use Custom 1 BOSSE body",
+    "Body": "Custom 1",
+    "Sex": "Female",
+    "Races": ["Altmer", "Bosmer", "Breton", "Dunmer", "Imperial", "Nord", "Orsimer", "Redguard"],
+    "Schlongs": [],
+    "AnySchlong": true
+}
